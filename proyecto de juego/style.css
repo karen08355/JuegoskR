@@ -1,0 +1,55 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background:linear-gradient(to bottom, #05363d, #52cdec);
+  padding: 40px;
+  margin: 10;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+  text-shadow: -4px -4px 0 rgb(37, 105, 114),
+    4px -4px 0 rgb(90, 197, 197),
+    -4px 4px 0 rgb(6, 161, 161),
+    4px 4px 0 rgb(6, 161, 161);
+}
+
+.menu {
+  display: grid;
+  gap: 50px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.menu a {
+  display: block;
+  padding: 80px;
+  background-color: #657bf3;
+  color: rgb(240, 235, 235);
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.menu a:hover {
+  background-color: #0f68ee;
+}
+
+/* Canvas para copos de nieve */
+#efecto-canvas {
+  position: fixed;       /* siempre visible al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  /* permite hacer clic a través del canvas */
+  z-index: -1;           /* detrás del contenido */
+}
+
+button {
+  width: 80PX;
+  height: 40PX;
+  background: #31b699;
+}

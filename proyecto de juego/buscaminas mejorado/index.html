@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Buscaminas Mejorado</title>
+
+  <style>
+
+    body {
+
+      font-family: sans-serif;
+
+      text-align: center;
+
+      background-color: #f0f0f0;
+
+    }
+
+    h1 {
+
+      margin-top: 20px;
+
+    }
+
+    .panel {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 20px;
+
+      align-items: center;
+
+      margin: 10px 0;
+
+    }
+
+    #tablero {
+
+      display: grid;
+
+      grid-template-columns: repeat(8, 40px);
+
+      gap: 2px;
+
+      justify-content: center;
+
+      margin: 10px auto;
+
+    }
+
+    .celda {
+
+      width: 40px;
+
+      height: 40px;
+
+      background-color: #bbb;
+
+      border: 1px solid #888;
+
+      font-size: 20px;
+
+      font-weight: bold;
+
+      line-height: 40px;
+
+      cursor: pointer;
+
+      user-select: none;
+
+    }
+
+    .celda.revelada {
+
+      background-color: #ddd;
+
+      cursor: default;
+
+    }
+
+    .celda.bandera {
+
+      background-color: #ffd966;
+
+    }
+
+    .celda.minada {
+
+      background-color: #e57373;
+
+    }
+
+    #mensaje {
+
+      font-size: 1.2em;
+
+      margin-top: 10px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Buscaminas</h1>
+
+  <div class="panel">
+
+    <p>Minas restantes: <span id="minas-restantes">10</span></p>
+
+    <p>Intentos: <span id="intentos">0</span></p>
+
+    <p>Tiempo: <span id="tiempo">0</span> s</p>
+
+    <button onclick="reiniciarJuego()">🔄 Reiniciar</button>
+
+  </div>
+
+  <div id="tablero"></div>
+
+  <p id="mensaje"></p>
+<script src="script.js"></script>
+
+</body>
+
+</html>
